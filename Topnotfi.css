@@ -1,0 +1,85 @@
+
+    #custom-alert {
+        position: fixed;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        font-family: Arial;
+        display: none;
+        border-radius: 10px;
+    }
+
+    #custom-alert .notification {
+        position: relative;
+        display: inline-block;
+    }
+
+    #custom-alert .badge {
+        
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -1px;
+        right: -20px;
+    }
+
+    #custom-alert .content {
+        margin-left: 0px;
+        display: inline-block;
+    }
+
+    #custom-alert .title {
+        font-weight: bold;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-family: 'Changa', sans-serif;
+    }
+   
+   @keyframes bellAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  /* ستايلات الزر - يمكنك تخصيصها حسب احتياجاتك */
+  .subscribe-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 30px;
+    font-size: 30px; /* تحديد حجم الإيموجي حسب الحاجة */
+    font-weight: bold;
+    text-decoration: none;
+    color: #000; /* لون النص حسب الحاجة */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .subscribe-btn .bell-emoji {
+    margin-right: -10px; /* تحديد هامش للإيموجي إذا كان موجودًا عن يمين النص */
+    animation: bellAnimation 1s infinite; /* تفعيل الرسم المتحرك وجعله متكررًا */
+  }
+
+  .subscribe-btn .badge {
+    position: absolute;
+    top: -5px; /* تحديد الموقع العمودي للرقم بناءً على حاجتك (تم نقله لأعلى) */
+    right: 0;
+    background-color: red; /* لون خلفية الرقم */
+    color: #fff; /* لون النص */
+    font-size: 12px; /* حجم الرقم */
+    padding: 3px 6px;
+    border-radius: 50%;
+  }
+   
